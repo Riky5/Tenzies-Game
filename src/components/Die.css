@@ -5,8 +5,12 @@
   align-items: center;
   border-radius: 6px;
   margin-inline: auto;
-  height: 4em;
-  width: 4em;
-  font-size: 1.8em;
+  height: 6.5em;
+  width: 6.3em;
   border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.die h1 {
+  font-size: 2.8em;
+  font-weight: bold;
 }
