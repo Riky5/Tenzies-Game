@@ -1,6 +1,19 @@
 .main {
-    background-color: white;
-    height: 88vh;
-    width: 94vw;
-    border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(253, 252, 252);
+  height: 92vh;
+  max-width: 80%;
+  border-radius: 10px;
+  margin-inline: auto;
+}
+
+.wrapper {
+  align-self: center;
+  align-items: center;
+  display: grid;
+  grid-gap: 1.8em;
+  grid-template-columns: repeat(5, 7em);
+  grid-template-rows: 7em 7em;
+  grid-auto-flow: column;
 }

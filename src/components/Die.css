@@ -1,0 +1,12 @@
+.die {
+  background-color: rgb(197, 241, 247);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-inline: auto;
+  height: 4em;
+  width: 4em;
+  font-size: 1.8em;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}
