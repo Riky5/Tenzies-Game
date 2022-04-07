@@ -8,16 +8,16 @@ function App() {
   function allNewDice() {
     const newDice = []
       for (let i = 0; i < 10; i++) {
-        newDice.push(Math.ceil(Math.random() * 6))
+        newDice.push({value: Math.ceil(Math.random() * 6), isHeld: false})
       }
-      return newDice
+    return newDice
   }
 
   function rollDice() {
     setDice(allNewDice)      
   }
 
-  const generateDie = dice.map((num,i)=> <Die key={i} value={num} />)
+  const generateDie = dice.map((die,i)=> <Die key={i} value={die.value} />)
 
   return (
     <main className="main">
