@@ -12,7 +12,6 @@ function App() {
     const result = dice.every(die => die.isHeld && die.value === dice[0].value)
       if (result) {
         setTenzies(true)
-        console.log("You won!")
       }
   }, [dice])
 
@@ -29,6 +28,10 @@ function App() {
   }
 
   function rollDice() {
+    if (tenzies) {
+      setTenzies(false)
+      setDice(allNewDice())
+    }
     setDice(oldDice => oldDice.map(die => {
       return die.isHeld === true ? die : {...die, id: nanoid(), value: Math.ceil(Math.random() * 6)}
     }))
