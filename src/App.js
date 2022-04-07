@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { nanoid } from 'nanoid'
 import './App.css';
 import Die from './components/Die'
+import Confetti from 'react-confetti'
 
 function App() {
   const [dice, setDice] = useState(allNewDice)
@@ -56,12 +57,13 @@ function App() {
 
   return (
     <main className="main">
+      {tenzies && <Confetti />}
       <h1 className="title">Tenzies</h1>
       <p className="instructions">Roll until all dice are the same.<br /> Click each die to freeze it at its current value between rolls.</p>
       <div className="wrapper">
         {generateDie}
       </div>
-      <button className='roll-btn' onClick={rollDice}>Roll Dice</button>
+      <button className='roll-btn' onClick={rollDice}>{tenzies ? "New Game" : "Roll Dice"}</button>
     </main>
   );
 }
