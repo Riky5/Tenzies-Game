@@ -23,7 +23,13 @@ function App() {
   }
 
   function holdDice(id) {
-    console.log(id)
+    const newDice = dice.map(die=>{
+      if (die.id === id) {
+        die.isHeld = !die.isHeld
+      }
+      return die
+    })
+    setDice(newDice)
   }
 
   const generateDie = dice.map((die)=> {
