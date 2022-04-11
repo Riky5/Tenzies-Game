@@ -14,10 +14,22 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+## Usage
+
+When you open the app this is what you should see (dice have random values)
+
+![screenshot-1](./src/images/Tenzies-1.png)
+
+Follow instructions: click on same dice and then roll again.
+
+![screenshot-2](./src//images/Tenzies-2.png)
+
+When you win you should see this:
+
+![screenshot-3](./src//images/Tenzies-3.png)
