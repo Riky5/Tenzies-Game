@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e5d10aaf-5bfd-49f4-81bf-0d7f11c01c4b/deploy-status)](https://app.netlify.com/sites/tenzies-react-exercise/deploys)
 # Tenzies Game
 
 Another exercise from Scrimba React course. Build a Tenzies Game.
