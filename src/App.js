@@ -7,6 +7,7 @@ import Confetti from 'react-confetti'
 function App() {
   const [dice, setDice] = useState(allNewDice)
   const [tenzies, setTenzies] = useState(false)
+  const [rolls, setRolls] = useState(0)
 
   useEffect(() => {
     const result = dice.every(die => die.isHeld && die.value === dice[0].value)
@@ -32,6 +33,7 @@ function App() {
       setTenzies(false)
       setDice(allNewDice())
     }
+    setRolls(prev=>prev+=1)
     setDice(oldDice => oldDice.map(die => {
       return die.isHeld === true ? die : {...die, id: nanoid(), value: Math.ceil(Math.random() * 6)}
     }))
@@ -66,6 +68,7 @@ function App() {
       <div className="wrapper">
         {generateDie}
       </div>
+      <p>rolls: {rolls}</p>
       <button className='roll-btn' onClick={rollDice}>{tenzies ? "New Game" : "Roll Dice"}</button>
     </main>
   );
