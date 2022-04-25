@@ -32,11 +32,12 @@ function App() {
     if (tenzies) {
       setTenzies(false)
       setDice(allNewDice())
+      setRolls(0)
     }
-    setRolls(prev=>prev+=1)
     setDice(oldDice => oldDice.map(die => {
       return die.isHeld === true ? die : {...die, id: nanoid(), value: Math.ceil(Math.random() * 6)}
     }))
+    setRolls(prev=>prev+=1)
   }
 
   function holdDice(id) {
@@ -68,8 +69,10 @@ function App() {
       <div className="wrapper">
         {generateDie}
       </div>
-      <p>rolls: {rolls}</p>
-      <button className='roll-btn' onClick={rollDice}>{tenzies ? "New Game" : "Roll Dice"}</button>
+      <div className='count-and-btn'>
+        <p className='roll-count'>Rolls: {rolls}</p>
+        <button className='roll-btn' onClick={rollDice}>{tenzies ? "New Game" : "Roll Dice"}</button>
+      </div>
     </main>
   );
 }
